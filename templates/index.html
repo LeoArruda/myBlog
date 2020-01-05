@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-7">
-        <h1 style="color: #7DBBD6;">ROCKET ANALYTICS</h1>
+        <h1 style="color: #7DBBD6;">BRAIN Elixir</h1>
         <h2>
           <font color="#7DBBD6">Data Exploration Blog</font>
         </h2>
@@ -82,8 +82,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua</h2><a href="#" class="hero-link">View More</a>
+        <h2>There is always more to learn no matter where you are in your career. We are both learners and teachers at
+          heart.</h2><a href="#" class="hero-link">View More</a>
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@
   <div class="container">
     <header>
       <h2>Latest from the blog</h2>
-      <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="text-big">Follow up our latest posts.</p>
     </header>
     <div class="row">
       {% for obj in latest %}
@@ -124,8 +124,9 @@
     <div class="row">
       <div class="col-md-6">
         <h2>Subscribe to Newsletter</h2>
-        <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua.</p>
+        <p class="text-big">Your source for the latest in deep learning, big data, data science, and artificial
+          intelligence.</p>
+        <p class="text-big">Sign up now! <strong>No spam, ever.</strong></p>
       </div>
       <div class="col-md-8">
         <div class="form-holder">
@@ -145,30 +146,16 @@
 <!--  TODO Dynamic loading of gallery section-->
 <section class="gallery no-padding">
   <div class="row">
+    {% for obj in gallery %}
     <div class="mix col-lg-3 col-md-3 col-sm-6">
-      <div class="item"><a href="img/gallery-1.jpg" data-fancybox="gallery" class="image"><img
-            src="{% static 'img/gallery-1.jpg' %}" alt="..." class="img-fluid">
+      <div class="item">
+        <a href="post/{{obj.id}}" data-fancybox="gallery" class="image">
+          <img src="{{ obj.thumbnail.url }}" alt="..." class="img-fluid">
           <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div>
-        </a></div>
+        </a>
+      </div>
     </div>
-    <div class="mix col-lg-3 col-md-3 col-sm-6">
-      <div class="item"><a href="img/gallery-2.jpg" data-fancybox="gallery" class="image"><img
-            src="{% static 'img/gallery-2.jpg' %}" alt="..." class="img-fluid">
-          <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div>
-        </a></div>
-    </div>
-    <div class="mix col-lg-3 col-md-3 col-sm-6">
-      <div class="item"><a href="img/gallery-3.jpg" data-fancybox="gallery" class="image"><img
-            src="{% static 'img/gallery-3.jpg' %}" alt="..." class="img-fluid">
-          <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div>
-        </a></div>
-    </div>
-    <div class="mix col-lg-3 col-md-3 col-sm-6">
-      <div class="item"><a href="img/gallery-4.jpg" data-fancybox="gallery" class="image"><img
-            src="{% static 'img/gallery-4.jpg' %}" alt="..." class="img-fluid">
-          <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div>
-        </a></div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 

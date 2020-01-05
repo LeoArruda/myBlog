@@ -3,6 +3,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from django.contrib.sessions.models import Session
+from django.contrib.auth.models import User
+
+
 from posts.views import (
     index,
     search,
@@ -29,7 +33,7 @@ urlpatterns = [
     path('blog/', PostListView.as_view(), name='post-list'),
     path('search/', search, name='search'),
     path('search/', search, name='search'),
-    path('about/', aboutview,  name='about'),
+    path('about/', aboutview, name='about'),
     path('email-signup/', email_list_signup, name='email-list-signup'),
     # path('create/', post_create, name='post-create'),
     path('create/', PostCreateView.as_view(), name='post-create'),

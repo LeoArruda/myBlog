@@ -8,6 +8,8 @@ from .forms import CommentForm, PostForm
 from .models import Post, Author, PostView
 from marketing.forms import EmailSignupForm
 from marketing.models import Signup
+from random import randint
+import random
 
 form = EmailSignupForm()
 
@@ -21,6 +23,21 @@ def get_author(user):
 
 def aboutview(request):
     return render(request, "about.html")
+
+
+def get_rand_element(l):
+    if l:
+        return l[randint(0, len(l)-1)]
+    else:
+        return None
+
+
+def random_list(to_randomize, elements=4):
+    # new_list = random.choice(to_randomize, elements)
+    new_list = []
+    for i in range(1, elements):
+        new_list.append(get_rand_element(to_randomize))
+    return new_list
 
 
 class SearchView(View):
@@ -66,10 +83,12 @@ class IndexView(View):
     def get(self, request, *args, **kwargs):
         featured = Post.objects.filter(featured=True)
         latest = Post.objects.order_by('-timestamp')[0:3]
+        random_gallery = random_list(Post.objects.order_by('-timestamp'), 5)
         context = {
             'object_list': featured,
             'latest': latest,
-            'form': self.form
+            'form': self.form,
+            'gallery': random_gallery
         }
         return render(request, 'index.html', context)
 
@@ -85,6 +104,9 @@ class IndexView(View):
 def index(request):
     featured = Post.objects.filter(featured=True)
     latest = Post.objects.order_by('-timestamp')[0:3]
+    random_gallery = random_list(Post.objects.order_by('-timestamp'), 5)
+    # random_gallery = Post.objects.order_by('-timestamp')[0:3]
+    print(random_gallery)
 
     if request.method == "POST":
         email = request.POST["email"]
@@ -95,7 +117,8 @@ def index(request):
     context = {
         'object_list': featured,
         'latest': latest,
-        'form': form
+        'form': form,
+        'gallery': random_gallery
     }
     return render(request, 'index.html', context)
 
@@ -110,17 +133,20 @@ class PostListView(ListView):
     def get_context_data(self, **kwargs):
         category_count = get_category_count()
         most_recent = Post.objects.order_by('-timestamp')[:3]
+        random_gallery = random_list(Post.objects.order_by('-timestamp'), 5)
         context = super().get_context_data(**kwargs)
         context['most_recent'] = most_recent
         context['page_request_var'] = "page"
         context['category_count'] = category_count
         context['form'] = self.form
+        context['gallery'] = random_gallery
         return context
 
 
 def post_list(request):
     category_count = get_category_count()
     most_recent = Post.objects.order_by('-timestamp')[:3]
+    random_gallery = random_list(Post.objects.order_by('-timestamp'), 5)
     post_list = Post.objects.all()
     paginator = Paginator(post_list, 4)
     page_request_var = 'page'
@@ -137,7 +163,8 @@ def post_list(request):
         'most_recent': most_recent,
         'page_request_var': page_request_var,
         'category_count': category_count,
-        'form': form
+        'form': form,
+        'gallery': random_gallery
     }
     return render(request, 'blog.html', context)
 
@@ -160,11 +187,13 @@ class PostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         category_count = get_category_count()
         most_recent = Post.objects.order_by('-timestamp')[:3]
+        random_gallery = random_list(Post.objects.order_by('-timestamp'), 5)
         context = super().get_context_data(**kwargs)
         context['most_recent'] = most_recent
         context['page_request_var'] = "page"
         context['category_count'] = category_count
         context['form'] = self.form
+        context['gallery'] = random_gallery
         return context
 
     def post(self, request, *args, **kwargs):
@@ -182,6 +211,7 @@ class PostDetailView(DetailView):
 def post_detail(request, id):
     category_count = get_category_count()
     most_recent = Post.objects.order_by('-timestamp')[:3]
+    random_gallery = random_list(Post.objects.order_by('-timestamp'), 5)
     post = get_object_or_404(Post, id=id)
 
     if request.user.is_authenticated:
@@ -200,7 +230,8 @@ def post_detail(request, id):
         'post': post,
         'most_recent': most_recent,
         'category_count': category_count,
-        'form': form
+        'form': form,
+        'gallery': random_gallery
     }
     return render(request, 'post.html', context)
 

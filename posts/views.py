@@ -27,7 +27,7 @@ def aboutview(request):
 
 def get_rand_element(l):
     if l:
-        return l[randint(0, len(l)-1)]
+        return l[randint(0, len(l) - 1)]
     else:
         return None
 
@@ -46,8 +46,7 @@ class SearchView(View):
         query = request.GET.get('q')
         if query:
             queryset = queryset.filter(
-                Q(title__icontains=query) |
-                Q(overview__icontains=query)
+                Q(title__icontains=query) | Q(overview__icontains=query)
             ).distinct()
         context = {
             'queryset': queryset
@@ -60,8 +59,7 @@ def search(request):
     query = request.GET.get('q')
     if query:
         queryset = queryset.filter(
-            Q(title__icontains=query) |
-            Q(overview__icontains=query)
+            Q(title__icontains=query) | Q(overview__icontains=query)
         ).distinct()
     context = {
         'queryset': queryset

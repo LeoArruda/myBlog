@@ -1,0 +1,58 @@
+{% load static %}
+
+{% block content %}
+
+<style>
+    .hit-the-floor {
+        color: #fff;
+        font-size: 6em;
+        font-weight: bold;
+        font-family: Futura;
+        text-shadow:
+            0 1px 0 #ccc,
+            0 2px 0 #c9c9c9,
+            0 3px 0 #bbb,
+            0 4px 0 #b9b9b9,
+            0 5px 0 #aaa,
+            0 6px 1px rgba(0, 0, 0, .1),
+            0 0 5px rgba(0, 0, 0, .1),
+            0 1px 3px rgba(0, 0, 0, .3),
+            0 3px 5px rgba(0, 0, 0, .2),
+            0 5px 10px rgba(0, 0, 0, .25),
+            0 10px 10px rgba(0, 0, 0, .2),
+            0 20px 20px rgba(0, 0, 0, .15);
+    }
+
+    .hit-the-floor {
+        text-align: center;
+    }
+
+    body {
+        background-color: #f1f1f1;
+    }
+</style>
+<!-- Page content -->
+<div class="hit-the-floor">404</div>
+<div class="container mt--8 pb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7">
+            <div class="card bg-secondary shadow border-0">
+                <div class="card-header bg-transparent pb-5">
+
+                    <div class="text-muted text-center mt-2 mb-3">
+
+                        <span class="text-danger"> Oupssss, 404 </span>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mt-3 text-center">
+                <div class="col-12">
+                    <a href="#" class="text-light"><small>Go .. HOME</small></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

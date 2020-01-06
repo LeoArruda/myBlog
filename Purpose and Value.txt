@@ -1,0 +1,13 @@
+Purpose and Value
+Our Purpose
+We are an international team of 15 people who work on the content that gets released on Towards Data Science. Every day we review the submissions and offer feedback to a multitude of authors. Our goal is to present well-written, informative articles that our audience is excited to read.
+On top of that, we are always working on new projects (like developing a podcast channel) to further help our contributors to reach our audience. For everything we do, we try to involve our community as much as possible.
+Ultimately, we hope to make the world a better place and we believe that data-related knowledge is a crucial part of achieving this; so we work hard to bring more value to our data science community.
+“We believe that data-related knowledge is crucial in making the world a better place.” TDS team.
+Our Core Values
+Stay Positive: Sometimes the best way to protest is to propose something new. We help people who are trying to present and share new ideas. The more we offer new ideas and share knowledge, the quicker we can solve the pressing problems.
+Focus on Improvement: As we care about the long-term, we always seek to achieve manageable and gradual improvement. We continually want to earn and build on our readers’ trust!
+Be Grateful: Without Medium, or without our community, we never could have existed. We are thankful to all the people that have made this possible. We are especially grateful to our writers, Editorial Associates and anyone else who has helped us along the way.
+Our work would not be possible without our Editorial Associates. Since we started recruiting in October 2017, they have raised the quality of the content published on Towards Data Science. We now have a team of kind and responsible people, eager to learn, to help and to understand our authors’ ideas.
+Like in many bottom-up movements, Towards Data Science was also built with friends, family and people who decided to help without wanting anything in return. We thank them, and you, for everything.
+You can contact us here.

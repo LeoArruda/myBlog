@@ -11,3 +11,4 @@ instance/
 .webassets-cache
 .cache
 __pycache__/
+node_modules/

@@ -1,4 +1,13 @@
+# Initial setup files
 env/
 *.pyc
 .gitignore
 .vscode/
+
+# Django stuff
+*.log
+local_settings.pycdb.sqlite3
+instance/
+.webassets-cache
+.cache
+__pycache__/

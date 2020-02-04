@@ -11,3 +11,17 @@ Be Grateful: Without Medium, or without our community, we never could have exist
 Our work would not be possible without our Editorial Associates. Since we started recruiting in October 2017, they have raised the quality of the content published on Towards Data Science. We now have a team of kind and responsible people, eager to learn, to help and to understand our authors’ ideas.
 Like in many bottom-up movements, Towards Data Science was also built with friends, family and people who decided to help without wanting anything in return. We thank them, and you, for everything.
 You can contact us here.
+
+
+
+“Neo, sooner or later you’re going to realize, just as I did, that there’s a difference between knowing the path and walking the path.” ― Morpheus
+
+Data, like bricks, was never meant to remain in this form. It wants to be something more, but it can't on its own. That's where data science comes in, to turn data into information, insight, and intelligence, through the intelligent use of math, programming, and any relevant domain knowledge.
+
+
+
+It is said that the demand for data scientists outpaces supply.  Companies are hiring data scientists to tackle what they perceive to be their toughest problems. But what if that's not the right strategy?  I believe that companies are usually not facing one massive challenge to be solved by highly skilled data scientists, but likely are facing many small to medium-sized interconnected problems.  Rather than depending only on data scientists, I believe that these problems and potential solutions are more likely to be uncovered by subject matter experts who have been enabled to explore the data themselves. This strategy will not only build capacity but will ensure sustainability.
+
+
+
+All this is done through the creative application of the scientific process in mind, just like an architect finds ways to put all these bricks together to form something that is useful and hopefully stands the test of time. This needn't be done in a boring way, however. A positive attitude works best, as it allows for creativity and innovation. These essential qualities and more are explored in this blog, through articles, case studies, and anything data science-related.
